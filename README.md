@@ -1,3 +1,17 @@
+
+# Rick and Morty App
+We need you to create a simple web app to show the Rick and Morty characters with this open graphql endpoint https://rickandmortyapi.com/graphql
+
+Requirements:
+A readme to run the app
+We recommend you to use the following frameworks: react, yarn, antdesign, jest
+
+Nice to have:
+Extra points for a simple installation, typescript and test coverage.
+
+We don’t have a time limit. You can solve it at your pace.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
