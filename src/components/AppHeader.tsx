@@ -1,15 +1,21 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout, Button } from 'antd'
+import { useAppContext } from '@context/AppContext'
+import MenuOutlined from '@ant-design/icons/MenuOutlined'
+import MemoSvgLogo from '@components/shared/svg/Logo'
+
 const AppHeader: React.FC = () => {
+  const { menuOpened, setMenuOpened } = useAppContext()
   const { Header } = Layout
   return (
-    <Header className="header">
-      <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
+    <Header className="header flex items-center border-b border-slate-200">
+      <Button
+        className="menu mr-6"
+        type="link"
+        icon={<MenuOutlined />}
+        onClick={() => setMenuOpened(!menuOpened)}
+      />
+      <MemoSvgLogo />
     </Header>
   )
 }

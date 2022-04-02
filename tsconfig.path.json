@@ -6,7 +6,9 @@
       "@pages/*": ["pages/*"],
       "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"],
-      "@generated/*": ["generated/*"]
+      "@context/*": ["context/*"],
+      "@generated/*": ["generated/*"],
+      "@svg/*": ["shared/svg/*"]
     }
   }
 }

@@ -1,0 +1,6 @@
+{
+  "expandProps": "end",
+  "typescript": true,
+  "prettier":true,
+  "memo":true
+}

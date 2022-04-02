@@ -40,6 +40,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'generator-star-spacing': 0,
+    'no-unused-vars': 0,
   },
   globals: {
     React: true,

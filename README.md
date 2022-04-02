@@ -11,6 +11,41 @@ Extra points for a simple installation, typescript and test coverage.
 
 We don’t have a time limit. You can solve it at your pace.
 
+# TODO list
+
+1. Add and configure all tools required: react, typescript, eslint, jest, ant design, tailwind for utility (ant design has poor coverage), network client (graphql), graphql code gen  - done
+2. Create proper project structure - done
+3. Update readme file - in progress
+4. Examine endpoint to understand what exactly components are needed - in progress
+5. Implement responsive design with the required UI framework - in progress
+6. Prepare routing setup
+7. Create paginated listing with corresponding loading
+8. Prepare test suites
+9. Optional: full test coverage, load on scroll
+10. pre commit hook - lint & test
+11. i18n translation pack
+12. add alternative icon pack (ant design icons has poor coverage)
+13. Remote config - enable/disable features
+14. Switch to vite instead of webpack for faster development
+15. Add docker
+16. Add sentry.io or firebase crashlytics and performance
+17. Make the app universal (SSR + SPA) - next or gatsby
+18. Make the app PWA
+19. Support dark and light theme
+20. Improve accessibility (ARIA)
+21. RTL/LTR support
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Getting Started with Create React App
 

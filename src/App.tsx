@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './styles/App.less'
 import Providers from './providers/Providers'
 import Home from '@pages/Home'
 const App: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
-
+import AppContextProvider from '@context/AppContextProvider'
 const queryClient = new QueryClient()
 
 interface Props {
@@ -8,6 +8,10 @@ interface Props {
 }
 
 const Providers: React.FC<Props> = ({ children }) => {
-  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AppContextProvider>{children}</AppContextProvider>
+    </QueryClientProvider>
+  )
 }
 export default Providers
