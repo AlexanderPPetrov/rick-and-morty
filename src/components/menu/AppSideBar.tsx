@@ -13,7 +13,7 @@ const AppSideBar: React.FC = () => {
       className="sidebar"
       breakpoint={'lg'}
       theme="light"
-      width={320}
+      width={250}
       collapsedWidth={0}
       trigger={null}
     >

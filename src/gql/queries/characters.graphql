@@ -6,6 +6,18 @@ query GetCharacters($page: Int!) {
     }
     results {
       id
+      name
+      status
+      species
+      type
+      gender
+      image
+      episode {
+        id
+        characters {
+          id
+        }
+      }
     }
   }
 }
