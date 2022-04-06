@@ -12,12 +12,6 @@ query GetCharacters($page: Int!) {
       type
       gender
       image
-      episode {
-        id
-        characters {
-          id
-        }
-      }
     }
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import CharacterList from '@components/characters/CharacterList'
+import CharacterListContainer from '@components/characters/CharacterListContainer'
 import DefaultLayout from '@layouts/DefaultLayout'
 const Home: React.FC = () => {
   return (
     <DefaultLayout>
-      <CharacterList />
+      <CharacterListContainer />
     </DefaultLayout>
   )
 }
