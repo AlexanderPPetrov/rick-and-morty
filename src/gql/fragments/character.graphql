@@ -1,0 +1,7 @@
+fragment CharacterBase on Character {
+  id
+  name
+  image
+  species
+  gender
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import CharacterList from '@components/characters/CharacterList'
-import ListPagination from '@components/shared/ListPagination'
 import { useGetCharactersQuery } from '@generated/graphql'
 import { Alert } from 'antd'
 
@@ -15,7 +14,6 @@ const CharacterListContainer: React.FC = () => {
   return (
     <>
       <CharacterList data={data} />
-      <ListPagination />
     </>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Col, Card } from 'antd'
-import { Character } from '@generated/graphql'
+import { Col, Card, Avatar, Image } from 'antd'
+import { CharacterBaseFragment } from '@generated/graphql'
 import defaultAvatar from '@root/src/assets/images/default_avatar.png'
-
+import YoutubeOutlined from '@ant-design/icons/YoutubeOutlined'
+import PushpinOutlined from '@ant-design/icons/PushpinOutlined'
 interface Props {
-  character: Omit<Character, 'episode'>
+  character: CharacterBaseFragment
 }
 
 const CharacterListItem: React.FC<Props> = ({ character }) => {
@@ -16,9 +17,24 @@ const CharacterListItem: React.FC<Props> = ({ character }) => {
       <Card
         hoverable
         style={{ width: 240 }}
-        cover={<img alt={character.name ?? ''} src={character.image ?? defaultAvatar} />}
+        actions={[<YoutubeOutlined key="episodes" />, <PushpinOutlined key="location" />]}
       >
-        <Card.Meta title={character.name} description={character.species} />
+        <Card.Meta
+          avatar={
+            <Avatar
+              size={64}
+              src={
+                <Image
+                  alt={character.name ?? ''}
+                  src={character.image ?? defaultAvatar}
+                  style={{ width: 64 }}
+                />
+              }
+            />
+          }
+          title={character.name}
+          description={character.species}
+        />
       </Card>
     </Col>
   )

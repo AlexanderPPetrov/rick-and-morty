@@ -12,7 +12,7 @@ interface Props {
 
 const DefaultLayout: React.FC<Props> = ({ children }) => {
   return (
-    <Layout>
+    <Layout className="h-full">
       <AppHeader />
       <MobileView>
         <AppDrawer></AppDrawer>
@@ -21,8 +21,8 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
         <BrowserView>
           <AppSideBar></AppSideBar>
         </BrowserView>
-        <Layout style={{ padding: '0 24px 24px' }}>
-          <AppBreadcrumb />
+        <Layout className="px-6 py-4 overflow-y-auto">
+          {/*<AppBreadcrumb />*/}
           {children}
         </Layout>
       </Layout>

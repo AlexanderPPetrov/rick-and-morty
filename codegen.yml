@@ -13,6 +13,6 @@ generates:
         fetchParams:
           headers:
             content-type: "application/json"
-  ./graphql.schema.json:
+  src/generated/graphql.schema.json:
     plugins:
       - "introspection"

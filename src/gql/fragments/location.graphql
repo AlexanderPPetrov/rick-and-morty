@@ -1,0 +1,6 @@
+fragment LocationBase on Location {
+  id
+  name
+  type
+  dimension
+}

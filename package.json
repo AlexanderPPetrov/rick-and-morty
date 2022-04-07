@@ -33,10 +33,12 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/fragment-matcher": "^3.2.1",
     "@graphql-codegen/introspection": "2.1.1",
     "@graphql-codegen/typescript": "2.4.8",
     "@graphql-codegen/typescript-operations": "2.3.5",
     "@graphql-codegen/typescript-react-query": "^3.5.9",
+    "@graphql-eslint/eslint-plugin": "^3.10.2",
     "@svgr/cli": "^5.5.0",
     "@svgr/webpack": "^5.5.0",
     "@types/jest": "^27.0.1",

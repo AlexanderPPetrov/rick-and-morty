@@ -7,6 +7,20 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
+  overrides: [
+    {
+      files: ['*.graphql'],
+      parser: '@graphql-eslint/eslint-plugin',
+      plugins: ['@graphql-eslint'],
+      rules: {
+        'prettier/prettier': 'error',
+      },
+      parserOptions: {
+        operations: './src/**/*.graphql',
+        schema: './generated/graphql.schema.json',
+      },
+    },
+  ],
   env: {
     browser: true,
     commonjs: true,
