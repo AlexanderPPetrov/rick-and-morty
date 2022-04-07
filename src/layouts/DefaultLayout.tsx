@@ -2,7 +2,6 @@ import React from 'react'
 import { Layout } from 'antd'
 import AppHeader from '@components/AppHeader'
 import AppSideBar from '@components/menu/AppSideBar'
-import AppBreadcrumb from '@components/AppBreadcrumb'
 import AppDrawer from '@components/menu/AppDrawer'
 import { MobileView, BrowserView } from 'react-device-detect'
 
@@ -21,10 +20,7 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
         <BrowserView>
           <AppSideBar></AppSideBar>
         </BrowserView>
-        <Layout className="px-6 py-4 overflow-y-auto">
-          {/*<AppBreadcrumb />*/}
-          {children}
-        </Layout>
+        <Layout className="px-6 py-4 overflow-y-auto">{children}</Layout>
       </Layout>
     </Layout>
   )
