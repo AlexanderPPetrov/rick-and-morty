@@ -10,14 +10,21 @@ interface CharacterWithSkeleton extends CharacterBaseFragment {
 }
 interface Props {
   character: CharacterWithSkeleton
-  loading: boolean
+  isLoading: boolean
+  isFetchingNextPage: boolean
   sentryRef?: React.Ref<HTMLDivElement>
 }
 
-const CharacterListItem: React.FC<Props> = ({ character, loading, sentryRef }) => {
+const CharacterListItem: React.FC<Props> = ({
+  character,
+  isLoading,
+  isFetchingNextPage,
+  sentryRef,
+}) => {
   if (!character) {
     return null
   }
+  const loading = isLoading || isFetchingNextPage
   return (
     <Col xs={24} xl={6} ref={sentryRef}>
       <Card

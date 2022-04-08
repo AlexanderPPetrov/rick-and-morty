@@ -7,7 +7,7 @@ import CharacterPageList from '@components/characters/CharacterPageList'
 import { getMockPageResults } from '@utils/mockResults'
 
 const CharacterListContainer: React.FC = () => {
-  const { status, data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
+  const { data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
     useInfiniteGetCharactersQuery(
       'page',
       {
@@ -21,7 +21,6 @@ const CharacterListContainer: React.FC = () => {
         },
       },
     )
-  console.log(status, data, error, isLoading, isFetchingNextPage, hasNextPage)
 
   const [sentryRef] = useInfiniteScroll({
     hasNextPage: hasNextPage ?? false,
@@ -34,11 +33,16 @@ const CharacterListContainer: React.FC = () => {
     return <Alert message="Error" description="Could not load characters" type="error" showIcon />
   }
   const pagesData = data?.pages ?? []
-  const loading = isLoading || isFetchingNextPage ? true : false
-  const pages = loading ? [...pagesData, getMockPageResults('characters')] : pagesData
+  const pages =
+    isLoading || isFetchingNextPage ? [...pagesData, getMockPageResults('characters')] : pagesData
   return (
     <>
-      <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
+      <CharacterPageList
+        pages={pages}
+        isLoading={isLoading}
+        isFetchingNextPage={isFetchingNextPage}
+        sentryRef={sentryRef}
+      />
     </>
   )
 }

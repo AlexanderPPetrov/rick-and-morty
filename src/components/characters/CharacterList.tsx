@@ -5,9 +5,10 @@ import CharacterListItem from '@components/characters/CharacterListItem'
 interface Props {
   data: GetCharactersQuery
   sentryRef?: React.Ref<HTMLDivElement>
-  loading: boolean
+  isLoading: boolean
+  isFetchingNextPage: boolean
 }
-const CharacterList: React.FC<Props> = ({ data, loading, sentryRef }) => {
+const CharacterList: React.FC<Props> = ({ data, isLoading, isFetchingNextPage, sentryRef }) => {
   return (
     <Row gutter={[12, 12]}>
       {data?.characters?.results &&
@@ -17,7 +18,8 @@ const CharacterList: React.FC<Props> = ({ data, loading, sentryRef }) => {
               <CharacterListItem
                 key={index}
                 character={character}
-                loading={loading}
+                isLoading={isLoading}
+                isFetchingNextPage={isFetchingNextPage}
                 sentryRef={sentryRef}
               />
             ),
