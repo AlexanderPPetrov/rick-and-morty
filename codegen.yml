@@ -8,6 +8,7 @@ generates:
       - "typescript-operations"
       - "typescript-react-query"
     config:
+      addInfiniteQuery: true
       fetcher:
         endpoint: 'https://rickandmortyapi.com/graphql'
         fetchParams:

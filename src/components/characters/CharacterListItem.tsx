@@ -1,40 +1,47 @@
 import React from 'react'
-import { Col, Card, Avatar, Image } from 'antd'
+import { Col, Card, Avatar, Image, Skeleton } from 'antd'
 import { CharacterBaseFragment } from '@generated/graphql'
 import defaultAvatar from '@root/src/assets/images/default_avatar.png'
 import YoutubeOutlined from '@ant-design/icons/YoutubeOutlined'
 import PushpinOutlined from '@ant-design/icons/PushpinOutlined'
+
+interface CharacterWithSkeleton extends CharacterBaseFragment {
+  skeleton?: boolean
+}
 interface Props {
-  character: CharacterBaseFragment
+  character: CharacterWithSkeleton
+  loading: boolean
+  sentryRef?: React.Ref<HTMLDivElement>
 }
 
-const CharacterListItem: React.FC<Props> = ({ character }) => {
+const CharacterListItem: React.FC<Props> = ({ character, loading, sentryRef }) => {
   if (!character) {
     return null
   }
   return (
-    <Col span={6}>
+    <Col xs={24} xl={6} ref={sentryRef}>
       <Card
         hoverable
-        style={{ width: 240 }}
         actions={[<YoutubeOutlined key="episodes" />, <PushpinOutlined key="location" />]}
       >
-        <Card.Meta
-          avatar={
-            <Avatar
-              size={64}
-              src={
-                <Image
-                  alt={character.name ?? ''}
-                  src={character.image ?? defaultAvatar}
-                  style={{ width: 64 }}
-                />
-              }
-            />
-          }
-          title={character.name}
-          description={character.species}
-        />
+        <Skeleton active avatar loading={loading && character.skeleton} paragraph={{ rows: 1 }}>
+          <Card.Meta
+            avatar={
+              <Avatar
+                size={64}
+                src={
+                  <Image
+                    alt={character.name ?? ''}
+                    src={character.image ?? defaultAvatar}
+                    style={{ width: 64 }}
+                  />
+                }
+              />
+            }
+            title={character.name}
+            description={character.species}
+          />
+        </Skeleton>
       </Card>
     </Col>
   )

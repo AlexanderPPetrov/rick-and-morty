@@ -8,6 +8,7 @@
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
       "@generated/*": ["generated/*"],
+      "@utils/*": ["utils/*"],
       "@svg/*": ["shared/svg/*"]
     }
   }

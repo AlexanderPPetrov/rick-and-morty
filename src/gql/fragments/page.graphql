@@ -1,0 +1,4 @@
+fragment PageBase on Info {
+  count
+  next
+}
