@@ -3,20 +3,21 @@ import { useInfiniteGetCharactersQuery } from '@generated/graphql'
 import useInfiniteScroll from 'react-infinite-scroll-hook'
 
 import { Alert } from 'antd'
-import CharacterList from '@components/characters/CharacterList'
+import CharacterPageList from '@components/characters/CharacterPageList'
 import { getMockPageResults } from '@utils/mockResults'
 
 const CharacterListContainer: React.FC = () => {
-  const page = 1
   const { status, data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
     useInfiniteGetCharactersQuery(
       'page',
       {
-        page,
+        page: 1,
       },
       {
         getNextPageParam: lastPage => {
-          return lastPage?.characters?.info?.next
+          return {
+            page: lastPage?.characters?.info?.next,
+          }
         },
       },
     )
@@ -25,7 +26,7 @@ const CharacterListContainer: React.FC = () => {
   const [sentryRef] = useInfiniteScroll({
     hasNextPage: hasNextPage ?? false,
     loading: isFetchingNextPage,
-    onLoadMore: () => fetchNextPage(),
+    onLoadMore: fetchNextPage,
     rootMargin: '0px 0px 800px 0px',
   })
 
@@ -37,10 +38,7 @@ const CharacterListContainer: React.FC = () => {
   const pages = loading ? [...pagesData, getMockPageResults('characters')] : pagesData
   return (
     <>
-      {pages.map(
-        (page, index: number) =>
-          page && <CharacterList key={index} data={page} loading={loading} sentryRef={sentryRef} />,
-      )}
+      <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
     </>
   )
 }
