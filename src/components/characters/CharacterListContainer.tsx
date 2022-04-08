@@ -5,9 +5,11 @@ import useInfiniteScroll from 'react-infinite-scroll-hook'
 import { Alert } from 'antd'
 import CharacterPageList from '@components/characters/CharacterPageList'
 import { getMockPageResults } from '@utils/mockResults'
+import PageTitle from '@components/shared/PageTitle'
+import PageSearch from '@components/shared/PageSearch'
 
 const CharacterListContainer: React.FC = () => {
-  const { data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
+  const { status, data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
     useInfiniteGetCharactersQuery(
       'page',
       {
@@ -21,6 +23,7 @@ const CharacterListContainer: React.FC = () => {
         },
       },
     )
+  console.log(status, data, error, isLoading, isFetchingNextPage, hasNextPage)
 
   const [sentryRef] = useInfiniteScroll({
     hasNextPage: hasNextPage ?? false,
@@ -33,16 +36,15 @@ const CharacterListContainer: React.FC = () => {
     return <Alert message="Error" description="Could not load characters" type="error" showIcon />
   }
   const pagesData = data?.pages ?? []
-  const pages =
-    isLoading || isFetchingNextPage ? [...pagesData, getMockPageResults('characters')] : pagesData
+  const loading = isLoading || isFetchingNextPage ? true : false
+  const pages = loading ? [...pagesData, getMockPageResults('characters')] : pagesData
   return (
     <>
-      <CharacterPageList
-        pages={pages}
-        isLoading={isLoading}
-        isFetchingNextPage={isFetchingNextPage}
-        sentryRef={sentryRef}
-      />
+      <div className="flex justify-between items-center my-3">
+        <PageTitle title="Characters" />
+        <PageSearch placeholder="Search for characters" />
+      </div>
+      <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
     </>
   )
 }

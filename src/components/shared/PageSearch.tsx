@@ -7,7 +7,7 @@ interface Props {
 }
 const onSearch = (value: any) => console.log(value)
 
-const PageTitle: React.FC<Props> = ({ placeholder }) => {
+const PageSearch: React.FC<Props> = ({ placeholder }) => {
   return (
     <Search
       size="large"
@@ -18,4 +18,4 @@ const PageTitle: React.FC<Props> = ({ placeholder }) => {
     />
   )
 }
-export default PageTitle
+export default PageSearch

@@ -2,35 +2,19 @@ import React from 'react'
 import { Row } from 'antd'
 import CharacterList from '@components/characters/CharacterList'
 import { GetCharactersQuery } from '@generated/graphql'
-import PageLoader from '@components/shared/PageLoader'
 
 interface Props {
   pages: GetCharactersQuery[]
   sentryRef?: React.Ref<HTMLDivElement>
-  isLoading: boolean
-  isFetchingNextPage: boolean
+  loading: boolean
 }
-const CharacterPageList: React.FC<Props> = ({
-  pages,
-  isLoading,
-  isFetchingNextPage,
-  sentryRef,
-}) => {
+const CharacterPageList: React.FC<Props> = ({ pages, loading, sentryRef }) => {
   return (
-    <Row gutter={[12, 12]} className="relative">
+    <Row gutter={[12, 12]}>
       {pages.map(
         (page, index: number) =>
-          page && (
-            <CharacterList
-              key={index}
-              data={page}
-              isLoading={isLoading}
-              isFetchingNextPage={isFetchingNextPage}
-              sentryRef={sentryRef}
-            />
-          ),
+          page && <CharacterList key={index} data={page} loading={loading} sentryRef={sentryRef} />,
       )}
-      {isFetchingNextPage && <PageLoader />}
     </Row>
   )
 }
