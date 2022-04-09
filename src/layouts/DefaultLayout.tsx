@@ -20,7 +20,7 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
         <BrowserView>
           <AppSideBar></AppSideBar>
         </BrowserView>
-        <Layout className="px-6 py-4 overflow-y-auto relative">{children}</Layout>
+        <Layout className="px-6 py-4 overflow-y-auto">{children}</Layout>
       </Layout>
     </Layout>
   )

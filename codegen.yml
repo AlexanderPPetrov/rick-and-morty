@@ -10,10 +10,7 @@ generates:
     config:
       addInfiniteQuery: true
       fetcher:
-        endpoint: 'https://rickandmortyapi.com/graphql'
-        fetchParams:
-          headers:
-            content-type: "application/json"
+        func: '../network/fetcher#fetchData'
   src/generated/graphql.schema.json:
     plugins:
       - "introspection"

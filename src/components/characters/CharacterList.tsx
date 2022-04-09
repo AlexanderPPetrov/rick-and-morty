@@ -1,5 +1,4 @@
 import React from 'react'
-import { Row } from 'antd'
 import { GetCharactersQuery } from '@generated/graphql'
 import CharacterListItem from '@components/characters/CharacterListItem'
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 }
 const CharacterList: React.FC<Props> = ({ data, loading, sentryRef }) => {
   return (
-    <Row gutter={[12, 12]}>
+    <>
       {data?.characters?.results &&
         data.characters.results.map(
           (character, index: number) =>
@@ -22,7 +21,7 @@ const CharacterList: React.FC<Props> = ({ data, loading, sentryRef }) => {
               />
             ),
         )}
-    </Row>
+    </>
   )
 }
 export default CharacterList
