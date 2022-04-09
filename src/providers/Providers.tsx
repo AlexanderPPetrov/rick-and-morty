@@ -4,7 +4,7 @@ import AppContextProvider from '@context/AppContextProvider'
 const queryClient = new QueryClient()
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode | null
 }
 
 const Providers: React.FC<Props> = ({ children }) => {

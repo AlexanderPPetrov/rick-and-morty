@@ -60,10 +60,10 @@ const CharacterListContainer: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center my-3">
-        <PageTitle title="Characters" />
-        <PageSearch placeholder="Search for characters" handleSearch={setName} />
-      </div>
+      <PageTitle
+        title="Characters"
+        rightContent={<PageSearch placeholder="Search for characters" handleSearch={setName} />}
+      />
       <PageFilter optionsGroup={characterFilters} onChange={setFilters} />
 
       {error && <PageError error={error} />}
