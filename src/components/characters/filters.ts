@@ -1,5 +1,5 @@
 import { CheckboxOptionType } from 'antd/lib/checkbox/Group'
-import { optionGroup } from '@components/shared/PageFilter'
+import { optionGroup } from '@components/shared/page-components/PageFilter'
 
 export const statusOptions: Array<CheckboxOptionType | string | number> = [
   { label: 'Alive', value: 'alive' },

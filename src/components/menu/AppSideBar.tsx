@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout } from 'antd'
 import AppMenu from '@components/menu/AppMenu'
-import './sidebar.css'
 import { useAppContext } from '@context/AppContext'
 
 const AppSideBar: React.FC = () => {
@@ -10,7 +9,7 @@ const AppSideBar: React.FC = () => {
   return (
     <Layout.Sider
       collapsed={menuOpened}
-      className="sidebar"
+      className="min-h-screen"
       breakpoint={'lg'}
       theme="light"
       width={250}

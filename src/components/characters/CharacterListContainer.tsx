@@ -4,10 +4,10 @@ import useInfiniteScroll from 'react-infinite-scroll-hook'
 
 import CharacterPageList from '@components/characters/CharacterPageList'
 import { getMockPageResults } from '@utils/mockResults'
-import PageTitle from '@components/shared/PageTitle'
-import PageSearch from '@components/shared/PageSearch'
-import PageFilter from '@components/shared/PageFilter'
-import PageError from '@components/shared/PageError'
+import PageTitle from '@components/shared/page-components/PageTitle'
+import PageSearch from '@components/shared/page-components/PageSearch'
+import PageFilter from '@components/shared/page-components/PageFilter'
+import PageError from '@components/shared/page-components/PageError'
 import { characterFilters } from '@components/characters/filters'
 
 const CharacterListContainer: React.FC = () => {
@@ -60,12 +60,12 @@ const CharacterListContainer: React.FC = () => {
 
   return (
     <>
-      <PageFilter optionsGroup={characterFilters} onChange={setFilters} />
-
       <div className="flex justify-between items-center my-3">
         <PageTitle title="Characters" />
         <PageSearch placeholder="Search for characters" handleSearch={setName} />
       </div>
+      <PageFilter optionsGroup={characterFilters} onChange={setFilters} />
+
       {error && <PageError error={error} />}
       <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
     </>
