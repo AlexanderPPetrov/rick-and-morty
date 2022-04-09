@@ -6,7 +6,9 @@ import CharacterPageList from '@components/characters/CharacterPageList'
 import { getMockPageResults } from '@utils/mockResults'
 import PageTitle from '@components/shared/PageTitle'
 import PageSearch from '@components/shared/PageSearch'
+import PageFilter from '@components/shared/PageFilter'
 import PageError from '@components/shared/PageError'
+import { statusOptions, genderOptions } from '@components/characters/filters'
 
 const CharacterListContainer: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>('')
@@ -40,11 +42,14 @@ const CharacterListContainer: React.FC = () => {
   const pagesData = data?.pages ?? []
   const loading = isLoading || isFetchingNextPage
   const pages = loading ? [...pagesData, getMockPageResults('characters')] : pagesData
+
   return (
     <>
       <div className="flex justify-between items-center my-3">
         <PageTitle title="Characters" />
         <PageSearch placeholder="Search for characters" handleSearch={setSearchValue} />
+        <PageFilter optionsGroup={statusOptions} />
+        <PageFilter optionsGroup={genderOptions} />
       </div>
       {error && <PageError error={error} />}
       <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
