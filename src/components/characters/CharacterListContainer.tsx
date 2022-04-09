@@ -8,11 +8,26 @@ import PageTitle from '@components/shared/PageTitle'
 import PageSearch from '@components/shared/PageSearch'
 import PageFilter from '@components/shared/PageFilter'
 import PageError from '@components/shared/PageError'
-import { statusOptions, genderOptions } from '@components/characters/filters'
+import { characterFilters } from '@components/characters/filters'
 
 const CharacterListContainer: React.FC = () => {
-  const [searchValue, setSearchValue] = useState<string>('')
-  const filter = searchValue ? { name: searchValue } : {}
+  const [name, setName] = useState<string>('')
+  const [gender, setGender] = useState<string>('')
+  const [status, setStatus] = useState<string>('')
+
+  const setFilters = (filterKey: string, value: string) => {
+    if (filterKey === 'gender') {
+      setGender(value)
+    }
+    if (filterKey === 'status') {
+      setStatus(value)
+    }
+  }
+  const filter = {
+    name,
+    gender,
+    status,
+  }
 
   const { data, error, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } =
     useInfiniteGetCharactersQuery(
@@ -45,11 +60,11 @@ const CharacterListContainer: React.FC = () => {
 
   return (
     <>
+      <PageFilter optionsGroup={characterFilters} onChange={setFilters} />
+
       <div className="flex justify-between items-center my-3">
         <PageTitle title="Characters" />
-        <PageSearch placeholder="Search for characters" handleSearch={setSearchValue} />
-        <PageFilter optionsGroup={statusOptions} />
-        <PageFilter optionsGroup={genderOptions} />
+        <PageSearch placeholder="Search for characters" handleSearch={setName} />
       </div>
       {error && <PageError error={error} />}
       <CharacterPageList pages={pages} loading={loading} sentryRef={sentryRef} />
