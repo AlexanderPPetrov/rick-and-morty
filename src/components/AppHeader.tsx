@@ -8,6 +8,7 @@ const AppHeader: React.FC = () => {
   const { menuOpened, setMenuOpened, setTheme } = useAppContext()
   const { Header } = Layout
 
+  // TODO  Support Light and Dark theme
   // Seems not quite an easy job, will leave it for now as
   // only Menu and Sider components support light and dark theme
   // function onChange(checked: boolean) {
