@@ -1,5 +1,5 @@
 import React from 'react'
-import { Collapse, Radio, Divider } from 'antd'
+import { Collapse, Radio } from 'antd'
 import { CheckboxOptionType } from 'antd/lib/checkbox/Group'
 const { Panel } = Collapse
 

@@ -7,12 +7,12 @@ interface Props {
 
 const AppContextProvider = (props: Props) => {
   const [menuOpened, setMenuOpened] = useState<boolean>(false)
-  const [darkTheme, setDarkTheme] = useState<boolean>(false)
+  const [theme, setTheme] = useState<string>('light')
   const context: AppContextType = {
     menuOpened,
     setMenuOpened,
-    darkTheme,
-    setDarkTheme,
+    theme,
+    setTheme,
   }
 
   return <AppContext.Provider value={context}>{props.children}</AppContext.Provider>

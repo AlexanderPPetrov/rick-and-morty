@@ -29,6 +29,7 @@ const AppMenu: React.FC = () => {
   ))
   return (
     <Menu
+      theme="light"
       mode="inline"
       defaultSelectedKeys={[items[0].key]}
       style={{ height: '100%', borderRight: 0 }}
