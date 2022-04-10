@@ -29,7 +29,7 @@ We don’t have a time limit. You can solve it at your pace.
 |------------------------|----------------|------------------------------------------------------------------------------------------------|
 | Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/       |
 | Tests                  | partially done | I've just added several working test examples                                                  |
-| Simple installation    | partially done | Did not have time to setup Docker image, maybe it was part of the requirement                  |
+| Simple installation    | partially done | Did not have time to setup Docker container, maybe it was part of the requirement              |
 | Character Details page | done           | You have to click on the eye icon from the character card component within the list to test it |
 
 
