@@ -1,20 +1,19 @@
 import React from 'react'
 import { List } from 'antd'
-import { EpisodeBaseFragment } from '@generated/graphql'
+import { EpisodeBaseFragment, Maybe } from '@generated/graphql'
+import YoutubeOutlined from '@ant-design/icons/YoutubeOutlined'
 interface Props {
-  episodes?: EpisodeBaseFragment[] | null
+  episodes?: Maybe<EpisodeBaseFragment>[]
 }
 const EpisodeList: React.FC<Props> = ({ episodes }) => {
-  if (!episodes) {
-    return null
-  }
   return (
     <List
       itemLayout="horizontal"
-      dataSource={episodes}
+      dataSource={episodes ?? []}
       renderItem={item => (
         <List.Item>
-          <List.Item.Meta title={<span>{item.name}</span>} description={item.air_date} />
+          <YoutubeOutlined key="episodes" className="text-3xl mr-6" style={{ color: 'gray' }} />
+          <List.Item.Meta title={<span>{item?.name}</span>} description={item?.air_date} />
         </List.Item>
       )}
     />

@@ -4,4 +4,24 @@ fragment CharacterBase on Character {
   image
   species
   gender
+  episode {
+    id
+  }
+}
+
+fragment CharacterExtended on Character {
+  id
+  name
+  image
+  species
+  gender
+  episode {
+    id
+  }
+  location {
+    id
+    name
+    type
+    dimension
+  }
 }

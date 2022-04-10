@@ -18,14 +18,12 @@ const CharacterDetails: React.FC = () => {
       retry: 1,
     },
   )
-  const pageTitle = data?.character?.name ?? ''
+  const character = data?.character
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title="Character details" />
       {error && <PageError error={error} />}
-      {!error && data?.character && (
-        <CharacterDetailsItem character={data.character} loading={isLoading} />
-      )}
+      {!error && character && <CharacterDetailsItem character={character} loading={isLoading} />}
     </>
   )
 }
