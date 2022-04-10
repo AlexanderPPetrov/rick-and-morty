@@ -13,37 +13,37 @@ We don’t have a time limit. You can solve it at your pace.
 # Available demo
 [Demo](https://candid-marigold-2e798b.netlify.app/)
 
-# General Requirements based on assumptions
+## General Requirements based on assumptions
 
 | Features                     | status         | notes                                                                                                                                                                                             |
 |------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Responsive layout with antd  | done           | it detects initially device via react-device-detect.<br/> If you test have that in mind. <br/>Also I added tailwind as antd provides a very poor css utility coverage                             |
 | Characters Listing           | done           | I've started initially with an old fashion pagination, but decided to load more upon scroll.<br/> It's not the best solution as we are not destroying components that are not in the visible area |
 | Characters Filter and Search | partially done | not all available filters are covered, also did not have time to add reset filters functionality                                                                                                  |
-| Character Details page       | done           | You have to click on the eye icon to test it                                                                                                                                                      |
+| Character Details page       | done           | You have to click on the eye icon within the actions in character card to test it                                                                                                                 |
 | Episodes                     | not done       |                                                                                                                                                                                                   |
 | Locations                    | not done       |                                                                                                                                                                                                   |
 
 
-| Technical tasks        | status         | notes                                                                         |
-|------------------------|----------------|-------------------------------------------------------------------------------|
-| Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/                             |
-| Tests                  | partially done | I've just added several working test examples                                 |
-| Simple installation    | partially done | Did not have time to setup Docker image, maybe it was part of the requirement |
-| Character Details page | done           | You have to click on the eye icon to test it                                  |
+| Technical tasks        | status         | notes                                                                                          |
+|------------------------|----------------|------------------------------------------------------------------------------------------------|
+| Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/       |
+| Tests                  | partially done | I've just added several working test examples                                                  |
+| Simple installation    | partially done | Did not have time to setup Docker image, maybe it was part of the requirement                  |
+| Character Details page | done           | You have to click on the eye icon from the character card component within the list to test it |
 
 
-| Future improvements   | status | notes                                                                               |
-|-----------------------|--------|-------------------------------------------------------------------------------------|
-| precommit hook        | -      | |
-| i18n translations     | -      |                                        |
-| alternative icon pack | -      |        |
-| sentry.io             | -      |                                        |
-| Migrate to Next.js    | -      |                                                                                     |
-| PWA                   | -      |                                                                                     |
-| Dark theme support    | -      |                                                                                     |
-| Accessibility ARIA    | -      |                                                                                     |
-| RTL support           | -      |                                                                                     |
+| Optional future improvements | status | notes                                                                               |
+|------------------------------|--------|-------------------------------------------------------------------------------------|
+| precommit hook               | -      | |
+| i18n translations            | -      |                                        |
+| alternative icon pack        | -      |        |
+| sentry.io                    | -      |                                        |
+| Migrate to Next.js           | -      |                                                                                     |
+| PWA                          | -      |                                                                                     |
+| Dark theme support           | -      |                                                                                     |
+| Accessibility ARIA           | -      |                                                                                     |
+| RTL support                  | -      |                                                                                     |
 
 
 ### `yarn start`
