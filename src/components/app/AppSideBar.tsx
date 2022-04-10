@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from 'antd'
-import AppMenu from '@components/menu/AppMenu'
+import AppMenu from '@components/app/AppMenu'
 import { useAppContext } from '@context/AppContext'
 
 const AppSideBar: React.FC = () => {

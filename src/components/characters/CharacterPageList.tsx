@@ -10,7 +10,7 @@ interface Props {
 }
 const CharacterPageList: React.FC<Props> = ({ pages, loading, sentryRef }) => {
   return (
-    <Row gutter={[12, 12]}>
+    <Row gutter={[12, 12]} data-testid="character-page-list">
       {pages.map(
         (page, index: number) =>
           page && <CharacterList key={index} data={page} loading={loading} sentryRef={sentryRef} />,

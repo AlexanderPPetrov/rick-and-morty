@@ -27,7 +27,7 @@ const AppMenu: React.FC = () => {
     },
   ]
   const menuItems = items.map(item => (
-    <Menu.Item key={item.key} icon={item.icon}>
+    <Menu.Item key={item.key} icon={item.icon} data-testid={`app-menu-item-${item.key}`}>
       <NavLink to={item.path}>{item.title}</NavLink>
     </Menu.Item>
   ))
@@ -35,6 +35,7 @@ const AppMenu: React.FC = () => {
     <Menu
       theme="light"
       mode="inline"
+      data-testid="app-menu"
       defaultSelectedKeys={[items[0].key]}
       style={{ height: '100%', borderRight: 0 }}
     >

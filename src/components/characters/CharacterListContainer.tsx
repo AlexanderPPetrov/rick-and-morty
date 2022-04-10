@@ -58,6 +58,7 @@ const CharacterListContainer: React.FC = () => {
   const loading = isLoading || isFetchingNextPage
   const pages = loading ? [...pagesData, getMockPageResults('characters')] : pagesData
 
+  console.log(pages)
   return (
     <>
       <PageTitle

@@ -15,7 +15,7 @@ interface Props {
 
 const CharacterListItem: React.FC<Props> = ({ character, loading, sentryRef }) => {
   return (
-    <Col xs={24} xl={6} ref={sentryRef}>
+    <Col xs={24} xl={6} ref={sentryRef} className="character-list-item">
       <Card
         actions={[
           <YoutubeOutlined key="episodes" />,

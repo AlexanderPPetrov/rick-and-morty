@@ -1,7 +1,7 @@
 import React from 'react'
 import { Drawer } from 'antd'
 import { useAppContext } from '@context/AppContext'
-import AppMenu from '@components/menu/AppMenu'
+import AppMenu from '@components/app/AppMenu'
 
 const AppDrawer: React.FC = () => {
   const { menuOpened, setMenuOpened } = useAppContext()

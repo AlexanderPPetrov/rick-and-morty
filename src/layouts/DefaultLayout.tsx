@@ -1,8 +1,8 @@
 import React from 'react'
 import { Layout } from 'antd'
-import AppHeader from '@components/AppHeader'
-import AppSideBar from '@components/menu/AppSideBar'
-import AppDrawer from '@components/menu/AppDrawer'
+import AppHeader from '@components/app/AppHeader'
+import AppSideBar from '@components/app/AppSideBar'
+import AppDrawer from '@components/app/AppDrawer'
 import { MobileView, BrowserView } from 'react-device-detect'
 
 interface Props {
@@ -14,11 +14,11 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
     <Layout className="h-full">
       <AppHeader />
       <MobileView>
-        <AppDrawer></AppDrawer>
+        <AppDrawer />
       </MobileView>
       <Layout>
         <BrowserView>
-          <AppSideBar></AppSideBar>
+          <AppSideBar />
         </BrowserView>
         <Layout className="px-6 py-4 overflow-y-auto">{children}</Layout>
       </Layout>
