@@ -28,7 +28,8 @@ We don’t have a time limit. You can solve it at your pace.
 | Technical tasks        | status         | notes                                                                                          |
 |------------------------|----------------|------------------------------------------------------------------------------------------------|
 | Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/       |
-| Tests                  | partially done | I've just added several working test examples                                                  |
+| Unit Tests             | partially done | I've just added several working test examples                                                  |
+| E2E Tests              | not done       |                                              |
 | Simple installation    | partially done | Did not have time to setup Docker container, maybe it was part of the requirement              |
 | Character Details page | done           | You have to click on the eye icon from the character card component within the list to test it |
 
@@ -46,11 +47,15 @@ We don’t have a time limit. You can solve it at your pace.
 | RTL support                  | -      |                                                                                     |
 | Lazy load for images         | -      |                                                                                     |
 
+### `yarn install`
+
+Install all dependencies
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Currently codegen is executed upon start as a precaution so people don't endup with missing files
 
 ### `yarn test`
 
