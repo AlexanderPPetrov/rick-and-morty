@@ -31,7 +31,6 @@ We don’t have a time limit. You can solve it at your pace.
 | Unit Tests             | partially done | I've just added several working test examples                                                  |
 | E2E Tests              | not done       |                                              |
 | Simple installation    | partially done | Did not have time to setup Docker container, maybe it was part of the requirement              |
-| Character Details page | done           | You have to click on the eye icon from the character card component within the list to test it |
 
 
 | Optional future improvements | status | notes                                                                               |
