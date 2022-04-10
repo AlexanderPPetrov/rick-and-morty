@@ -44,6 +44,7 @@ We don’t have a time limit. You can solve it at your pace.
 | Dark theme support           | -      |                                                                                     |
 | Accessibility ARIA           | -      |                                                                                     |
 | RTL support                  | -      |                                                                                     |
+| Lazy load for images         | -      |                                                                                     |
 
 
 ### `yarn start`
