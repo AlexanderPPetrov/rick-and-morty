@@ -5,33 +5,13 @@ import CharacterDetails from '@pages/CharacterDetails'
 import Episodes from '@pages/Episodes'
 import Locations from '@pages/Locations'
 
-const routes = [
-  {
-    path: '/',
-    page: <Characters />,
-    exact: true,
-  },
-  {
-    path: '/aaaa',
-    page: <CharacterDetails />,
-    exact: true,
-  },
-  {
-    path: '/episodes',
-    page: <Episodes />,
-  },
-  {
-    path: 'locations',
-    page: <Locations />,
-  },
-]
-
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {routes.map((route, index) => (
-        <Route key={index} path={route.path} element={route.page} />
-      ))}
+      <Route path="/" element={<Characters />}></Route>
+      <Route path="characters/:characterId" element={<CharacterDetails />} />
+      <Route path="episodes" element={<Episodes />}></Route>
+      <Route path="locations" element={<Locations />}></Route>
     </Routes>
   )
 }

@@ -1,0 +1,6 @@
+fragment EpisodeBase on Episode {
+  id
+  name
+  episode
+  air_date
+}

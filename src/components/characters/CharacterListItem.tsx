@@ -1,13 +1,12 @@
 import React from 'react'
 import { Col, Card, Avatar, Image, Skeleton } from 'antd'
-import { CharacterBaseFragment } from '@generated/graphql'
 import defaultAvatar from '@root/src/assets/images/default_avatar.png'
 import YoutubeOutlined from '@ant-design/icons/YoutubeOutlined'
 import PushpinOutlined from '@ant-design/icons/PushpinOutlined'
+import EyeOutlined from '@ant-design/icons/EyeOutlined'
+import { Link } from 'react-router-dom'
+import { CharacterWithSkeleton } from '@components/characters/types'
 
-interface CharacterWithSkeleton extends CharacterBaseFragment {
-  skeleton?: boolean
-}
 interface Props {
   character: CharacterWithSkeleton
   loading: boolean
@@ -15,14 +14,16 @@ interface Props {
 }
 
 const CharacterListItem: React.FC<Props> = ({ character, loading, sentryRef }) => {
-  if (!character) {
-    return null
-  }
   return (
     <Col xs={24} xl={6} ref={sentryRef}>
       <Card
-        hoverable
-        actions={[<YoutubeOutlined key="episodes" />, <PushpinOutlined key="location" />]}
+        actions={[
+          <YoutubeOutlined key="episodes" />,
+          <PushpinOutlined key="location" />,
+          <Link key="location" to={`characters/${character.id}`}>
+            <EyeOutlined />
+          </Link>,
+        ]}
       >
         <Skeleton active avatar loading={loading && character.skeleton} paragraph={{ rows: 1 }}>
           <Card.Meta
@@ -41,6 +42,7 @@ const CharacterListItem: React.FC<Props> = ({ character, loading, sentryRef }) =
             title={character.name}
             description={character.species}
           />
+          <span>{character.gender}</span>
         </Skeleton>
       </Card>
     </Col>

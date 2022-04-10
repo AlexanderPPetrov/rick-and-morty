@@ -11,3 +11,16 @@ query GetCharacters($page: Int!, $filter: FilterCharacter) {
     }
   }
 }
+
+query GetCharacter($id: ID!){
+  character(id: $id) {
+    ...CharacterBase
+    status
+    location {
+    ...LocationBase
+    }
+    episode {
+      ...EpisodeBase
+    }
+  }
+}
