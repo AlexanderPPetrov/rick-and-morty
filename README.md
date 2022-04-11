@@ -21,30 +21,42 @@ We don’t have a time limit. You can solve it at your pace.
 | Characters Listing           | done           | I've started initially with an old fashion pagination, but decided to load more upon scroll.<br/> It's not the best solution as we are not destroying components that are not in the visible area |
 | Characters Filter and Search | partially done | not all available filters are covered, also did not have time to add reset filters functionality                                                                                                  |
 | Character Details page       | done           | You have to click on the eye icon within the actions in character card to test it                                                                                                                 |
-| Episodes                     | not done       |                                                                                                                                                                                                   |
-| Locations                    | not done       |                                                                                                                                                                                                   |
+| Episodes                     | not started    |                                                                                                                                                                                                   |
+| Locations                    | not started       |                                                                                                                                                                                                   |
 
 
 | Technical tasks        | status         | notes                                                                                          |
 |------------------------|----------------|------------------------------------------------------------------------------------------------|
 | Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/       |
 | Unit Tests             | partially done | I've just added several working test examples                                                  |
-| E2E Tests              | not done       |                                              |
+| E2E Tests              | not started       |                                              |
 | Simple installation    | partially done | Did not have time to setup Docker container, maybe it was part of the requirement              |
 
 
 | Optional future improvements | status | notes                                                                               |
 |------------------------------|--------|-------------------------------------------------------------------------------------|
-| precommit hook               | -      | |
-| i18n translations            | -      |                                        |
-| alternative icon pack        | -      |        |
-| sentry.io                    | -      |                                        |
-| Migrate to Next.js           | -      |                                                                                     |
-| PWA                          | -      |                                                                                     |
-| Dark theme support           | -      |                                                                                     |
-| Accessibility ARIA           | -      |                                                                                     |
-| RTL support                  | -      |                                                                                     |
-| Lazy load for images         | -      |                                                                                     |
+| precommit hook               | not started      | |
+| i18n translations            | not started      |                                        |
+| alternative icon pack        | not started      |        |
+| sentry.io                    | not started      |                                        |
+| Migrate to Next.js           | not started      |                                                                                     |
+| PWA                          | not started      |                                                                                     |
+| Dark theme support           | not started      |                                                                                     |
+| Accessibility ARIA           | not started      |                                                                                     |
+| RTL support                  | not started      |                                                                                     |
+| Lazy load for images         | not started      |                                                                                     |
+
+
+Main technologies used
+
+1. [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) - used to bootstrap the project
+2. [craco](https://github.com/gsoft-inc/craco) - used for additional project configuration
+3. [react-query](https://react-query.tanstack.com/) - agnostic to protocol (REST or GraphQL)
+4. [graphql-code-generator](https://www.graphql-code-generator.com/) - used to generate types, queries and mutations for direct usage in react components
+5. [antd](https://ant.design/docs/react/introduce) - used as a main UI library
+6. [tailwind](https://tailwindcss.com/) - used as a utility css library
+7. [react-testing-library-jest](https://testing-library.com/docs/react-testing-library/intro/) - used for unit testing
+
 
 ### `yarn install`
 
