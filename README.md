@@ -25,13 +25,14 @@ We don’t have a time limit. You can solve it at your pace.
 | Locations                    | not started       |                                                                                                                                                                                                   |
 
 
-| Technical tasks     | status         | notes                                                                                    |
-|---------------------|----------------|------------------------------------------------------------------------------------------|
-| Typescript          | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/ |
-| Unit Tests          | partially done | I've just added several working test examples                                            |
-| E2E Tests           | not started       |                                                                                          |
-| Simple installation | partially done | Did not have the time to setup Docker container, maybe it was part of the requirement    |
-| Refactoring         | partially done | Did not have the time to go over on some of the components e.g CharacterDetailsItem.tsx  |
+| Technical tasks     | status         | notes                                                                                                                  |
+|---------------------|----------------|------------------------------------------------------------------------------------------------------------------------|
+| Typescript          | done           |                                                                                                                        |
+| Networking          | done           | For data fetching I use custom fetcher in order to handle not found errors |
+| Unit Tests          | partially done | I've just added several working test examples                                                                          |
+| E2E Tests           | not started       |                                                                                                                        |
+| Simple installation | partially done | Did not have the time to setup Docker container, maybe it was part of the requirement                                  |
+| Refactoring         | partially done | Did not have the time to go over on some of the components e.g CharacterDetailsItem.tsx                                |
 
 
 | Optional improvements | status | notes                                                                               |
