@@ -34,18 +34,18 @@ We don’t have a time limit. You can solve it at your pace.
 | Refactoring         | partially done | Did not have the time to go over on some of the components e.g CharacterDetailsItem.tsx  |
 
 
-| Optional future improvements | status | notes                                                                               |
-|------------------------------|--------|-------------------------------------------------------------------------------------|
-| precommit hook               | not started      | |
-| i18n translations            | not started      |                                        |
-| alternative icon pack        | not started      |        |
-| sentry.io                    | not started      |                                        |
-| Migrate to Next.js           | not started      |                                                                                     |
-| PWA                          | not started      |                                                                                     |
-| Dark theme support           | not started      |                                                                                     |
-| Accessibility ARIA           | not started      |                                                                                     |
-| RTL support                  | not started      |                                                                                     |
-| Lazy load for images         | not started      |                                                                                     |
+| Optional improvements | status | notes                                                                               |
+|-----------------------------|--------|-------------------------------------------------------------------------------------|
+| precommit hook              | not started      | |
+| i18n translations           | not started      |                                        |
+| alternative icon pack       | not started      |        |
+| sentry.io                   | not started      |                                        |
+| Migrate to Next.js          | not started      |                                                                                     |
+| PWA                         | not started      |                                                                                     |
+| Dark theme support          | not started      |                                                                                     |
+| Accessibility ARIA          | not started      |                                                                                     |
+| RTL support                 | not started      |                                                                                     |
+| Lazy load for images        | not started      |                                                                                     |
 
 
 Main technologies used
