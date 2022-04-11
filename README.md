@@ -51,12 +51,17 @@ We don’t have a time limit. You can solve it at your pace.
 Main technologies used
 
 1. [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) - used to bootstrap the project
-2. [craco](https://github.com/gsoft-inc/craco) - used for additional project configuration
-3. [react-query](https://react-query.tanstack.com/) - used for networking as it's agnostic to protocol (REST or GraphQL)
-4. [graphql-code-generator](https://www.graphql-code-generator.com/) - used to generate types, queries and mutations for direct usage in react components
-5. [antd](https://ant.design/docs/react/introduce) - used as a main UI library
-6. [tailwind](https://tailwindcss.com/) - used as a utility css library
-7. [react-testing-library-jest](https://testing-library.com/docs/react-testing-library/intro/) - used for unit testing
+2. [react-router](https://reactrouter.com/docs/en/v6/getting-started/overview) - used for routing
+3. [craco](https://github.com/gsoft-inc/craco) - used for additional project configuration
+4. [react-query](https://react-query.tanstack.com/) - used for networking as it's agnostic to protocol (REST or GraphQL)
+5. [graphql-code-generator](https://www.graphql-code-generator.com/) - used to generate types, queries and mutations for direct usage in react components
+6. [react-device-detect](https://www.npmjs.com/package/react-device-detect) - Used for conditional rendering for desktop/mobile
+7. [antd](https://ant.design/docs/react/introduce) - used as a main UI library
+8. [tailwind](https://tailwindcss.com/) - used as a utility css library
+9. [react-testing-library-jest](https://testing-library.com/docs/react-testing-library/intro/) - used for unit testing
+10. [eslint](https://eslint.org/) - used for code quality assurance
+11. [svgr-cli](https://www.npmjs.com/package/@svgr/cli) - used to generate react components from svg files
+12. [react-infinite-scroll-hook](https://www.npmjs.com/package/react-infinite-scroll-hook) - used for implementation of IntersectionObserver for loading paginated results on scroll
 
 
 ### `yarn install`
