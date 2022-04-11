@@ -25,12 +25,13 @@ We don’t have a time limit. You can solve it at your pace.
 | Locations                    | not started       |                                                                                                                                                                                                   |
 
 
-| Technical tasks        | status         | notes                                                                                          |
-|------------------------|----------------|------------------------------------------------------------------------------------------------|
-| Typescript             | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/       |
-| Unit Tests             | partially done | I've just added several working test examples                                                  |
-| E2E Tests              | not started       |                                              |
-| Simple installation    | partially done | Did not have time to setup Docker container, maybe it was part of the requirement              |
+| Technical tasks     | status         | notes                                                                                    |
+|---------------------|----------------|------------------------------------------------------------------------------------------|
+| Typescript          | done           | For data fetching I use custom fetcher on top of https://www.graphql-code-generator.com/ |
+| Unit Tests          | partially done | I've just added several working test examples                                            |
+| E2E Tests           | not started       |                                                                                          |
+| Simple installation | partially done | Did not have the time to setup Docker container, maybe it was part of the requirement    |
+| Refactoring         | partially done | Did not have the time to go over on some of the components e.g CharacterDetailsItem.tsx  |
 
 
 | Optional future improvements | status | notes                                                                               |
@@ -51,7 +52,7 @@ Main technologies used
 
 1. [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) - used to bootstrap the project
 2. [craco](https://github.com/gsoft-inc/craco) - used for additional project configuration
-3. [react-query](https://react-query.tanstack.com/) - agnostic to protocol (REST or GraphQL)
+3. [react-query](https://react-query.tanstack.com/) - used for networking as it's agnostic to protocol (REST or GraphQL)
 4. [graphql-code-generator](https://www.graphql-code-generator.com/) - used to generate types, queries and mutations for direct usage in react components
 5. [antd](https://ant.design/docs/react/introduce) - used as a main UI library
 6. [tailwind](https://tailwindcss.com/) - used as a utility css library
